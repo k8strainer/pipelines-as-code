@@ -66,7 +66,7 @@ spec:
         taskRef:
           name: golang-test
           runAfter:
-           - fetch-repository
+           - git-clone
         workspaces:
           - name: source
             workspace: source
@@ -79,7 +79,7 @@ spec:
       - name: noop-task
         displayName: Task with no effect
         runAfter:
-          - fetch-repository
+          - golang-test
         workspaces:
           - name: source
             workspace: source
