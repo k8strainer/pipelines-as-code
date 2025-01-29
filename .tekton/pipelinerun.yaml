@@ -65,11 +65,11 @@ spec:
       - name: golang-test
         taskRef:
           name: golang-test
-          runAfter:
-           - git-clone
+        runAfter:
+         - fetch-repository
         workspaces:
-          - name: source
-            workspace: source
+         - name: source
+           workspace: source
         params:
         - name: package
           value: github.com/k8strainer/pipelines-as-code
