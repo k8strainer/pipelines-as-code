@@ -77,6 +77,7 @@ spec:
               image: registry.access.redhat.com/ubi9/ubi-micro
               workingDir: $(workspaces.source.path)
               script: |
+                echo "testrun 01"
                 exit 0
   workspaces:
     - name: source
