@@ -3,7 +3,7 @@ kind: PipelineRun
 metadata:
   name: pipelines-as-code-v1.0-branch
   annotations:
-    pipelinesascode.tekton.dev/on-event: "[pull_request, push]"
+    pipelinesascode.tekton.dev/on-event: "[pull_request, push, issue_comment]"
     pipelinesascode.tekton.dev/on-target-branch: "[v1.0]"
     pipelinesascode.tekton.dev/on-comment: '["/retest"]'
     pipelinesascode.tekton.dev/task: "git-clone"
