@@ -10,7 +10,7 @@ metadata:
     pipelinesascode.tekton.dev/max-keep-runs: "5"
 spec:
   pipelineRef:
-    name: sample-pipeline       # Referenz auf die Pipeline aus pipeline.yaml
+    name: sample-pipeline-v1.0-branch       # Referenz auf die Pipeline aus pipeline.yaml
   params:
     - name: repo_url
       value: "{{ repo_url }}"
