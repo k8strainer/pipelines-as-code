@@ -22,7 +22,7 @@ metadata:
     # You can add more tasks by increasing the suffix number, you can specify them as array to have multiple of them.
     # browse the tasks you want to include from hub on https://hub.tekton.dev/
     #
-    pipelinesascode.tekton.dev/task-2: "[curl, buildah]"
+    # pipelinesascode.tekton.dev/task-2: "[curl, buildah]"
 
     # How many runs we want to keep.
     pipelinesascode.tekton.dev/max-keep-runs: "5"
@@ -91,7 +91,7 @@ spec:
               image: registry.access.redhat.com/ubi9/ubi-micro
               workingDir: $(workspaces.source.path)
               script: |
-                echo "testrun 01"
+                echo "testrun 01 for MAIN branch"
                 exit 0
   workspaces:
     - name: source
