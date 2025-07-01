@@ -6,7 +6,11 @@ metadata:
 spec:
   params:
     - name: repo_url
+      type: string
+      description: Git repository url 
     - name: revision
+      type: string
+      description: Git branch 
   workspaces:
     - name: source
     - name: basic-auth
