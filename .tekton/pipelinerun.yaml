@@ -9,6 +9,7 @@ metadata:
     #pipelinesascode.tekton.dev/task: "git-clone"
     #pipelinesascode.tekton.dev/task-1: "golang-test"
     pipelinesascode.tekton.dev/max-keep-runs: "5"
+    pipelinesascode.tekton.dev/pipeline: ".tekton/pipeline.yaml"
 spec:
   pipelineRef:
     name: sample-pipeline-v1.0-branch       # Referenz auf die Pipeline aus pipeline.yaml
