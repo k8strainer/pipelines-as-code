@@ -2,6 +2,7 @@ apiVersion: tekton.dev/v1
 kind: Pipeline
 metadata:
   name: sample-pipeline-v1.0-branch
+  labels: test1
 spec:
   params:
     - name: repo_url
