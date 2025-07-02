@@ -3,7 +3,7 @@ kind: Pipeline
 metadata:
   name: sample-pipeline-v1.0-branch
   labels: 
-    pipeline: test1
+    pipeline: test2
 spec:
   params:
     - name: repo_url
