@@ -3,7 +3,7 @@
 apiVersion: tekton.dev/v1
 kind: PipelineRun
 metadata:
-  name: pipelines-as-code
+  name: pipelines-as-code-v0.1
   labels:
     app: testrun2
   annotations:
