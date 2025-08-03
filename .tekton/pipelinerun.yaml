@@ -1,4 +1,4 @@
-# Version for Artifact Hub with Remote Resolver
+# Version "artifact-v0.2" for Artifact Hub with direkt link
 
 apiVersion: tekton.dev/v1
 kind: PipelineRun
@@ -8,7 +8,12 @@ metadata:
     app: testrun2
   annotations:
     pipelinesascode.tekton.dev/on-event: "[pull_request, push, issue_comment]"
-    pipelinesascode.tekton.dev/on-target-branch: "[artifact-v0.1]"
+    pipelinesascode.tekton.dev/on-target-branch: "[artifact-v0.2]"
+    ## Artifact Hub is still using github content from tekton, check with : 
+    ## https://artifacthub.io/api/v1/packages/tekton-task/tekton-catalog-tasks/golang-test/ -> "content_url:" <"value">
+    pipelinesascode.tekton.dev/task: "[https://raw.githubusercontent.com/tektoncd/catalog/main/task/golang-test/0.2/golang-test.yaml]"
+    pipelinesascode.tekton.dev/task: "[https://raw.githubusercontent.com/tektoncd/catalog/main/task/git-clone/0.9/git-clone.yaml]"
+    ## 
     pipelinesascode.tekton.dev/on-comment: '["/retest"]'
     # Max history
     pipelinesascode.tekton.dev/max-keep-runs: "5"
@@ -35,18 +40,9 @@ spec:
     tasks:
     - name: fetch-repository
       taskRef:
-        resolver: hub
         params:
-        - name: catalog
-          value: tekton-catalog-tasks
-        - name: type
-          value: artifact          # Artifact Hub
-        - name: kind
-          value: task
         - name: name
           value: git-clone
-        - name: version
-          value: "0.9.0"
       workspaces:
       - name: output
         workspace: source
@@ -62,18 +58,9 @@ spec:
       runAfter:
       - fetch-repository
       taskRef:
-        resolver: hub
         params:
-        - name: catalog
-          value: tekton-catalog-tasks
-        - name: type
-          value: artifact
-        - name: kind
-          value: task
         - name: name
           value: golang-test
-        - name: version
-          value: "0.1.0"
       workspaces:
       - name: source
         workspace: source
