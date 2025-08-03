@@ -1,3 +1,5 @@
+# Version for Artifact Hub with Remote Resolver
+
 apiVersion: tekton.dev/v1
 kind: PipelineRun
 metadata:
