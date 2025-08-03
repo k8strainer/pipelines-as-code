@@ -11,7 +11,7 @@ metadata:
     pipelinesascode.tekton.dev/on-target-branch: "[artifact-v0.2]"
     ## Artifact Hub is still using github content from tekton, check with : 
     ## https://artifacthub.io/api/v1/packages/tekton-task/tekton-catalog-tasks/golang-test/ -> "content_url:" <"value">
-    pipelinesascode.tekton.dev/task: ["https://raw.githubusercontent.com/tektoncd/catalog/main/task/golang-test/0.2/golang-test.yaml"]
+    pipelinesascode.tekton.dev/task: "https://raw.githubusercontent.com/tektoncd/catalog/main/task/golang-test/0.2/golang-test.yaml"
     #pipelinesascode.tekton.dev/task-1: ["https://raw.githubusercontent.com/tektoncd/catalog/main/task/git-clone/0.9/git-clone.yaml"]
     ## 
     pipelinesascode.tekton.dev/on-comment: '["/retest"]'
