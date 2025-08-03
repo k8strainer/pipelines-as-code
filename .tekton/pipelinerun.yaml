@@ -6,7 +6,7 @@ metadata:
     app: testrun2
   annotations:
     pipelinesascode.tekton.dev/on-event: "[pull_request, push, issue_comment]"
-    pipelinesascode.tekton.dev/on-target-branch: "[main]"
+    pipelinesascode.tekton.dev/on-target-branch: "[artifact-v0.1]"
     pipelinesascode.tekton.dev/on-comment: '["/retest"]'
     # Max history
     pipelinesascode.tekton.dev/max-keep-runs: "5"
