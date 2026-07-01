@@ -5,8 +5,8 @@ kind: PipelineRun
 metadata:
   name: pipelines-as-code-v0.1
   labels:
-    app: testrun02
-    stage: testing-2
+    app: testrun03
+    stage: testing-3
     run: drv
   annotations:
     pipelinesascode.tekton.dev/on-event: "[pull_request, push, issue_comment]"
